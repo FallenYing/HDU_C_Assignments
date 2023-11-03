@@ -16,5 +16,12 @@ int main(void)
 
 int count_partitions(int n, int m)
 {
-    /*your code here*/
+    if (n == 0 || m == 1)
+        return 1;
+    if (n < m)
+        return count_partitions(n, n);
+    int with_part, without_part;
+    with_part = count_partitions(n - m, m);
+    without_part = count_partitions(n, m - 1);
+    return with_part + without_part;
 }

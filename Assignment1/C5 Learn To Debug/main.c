@@ -57,7 +57,7 @@ void triggerStackOverflow(int value) {
 int main(void) {
     int number;
     printf("What is your favorite number from 0 to 1023?\n");
-    // 如果嫌太烦了建议使用数字42
+    // 如果嫌太烦了建议使用数字 42
     scanf("%d", &number);
     while (number < 0 || number > 1023) {
         printf("Oops!You played a joke on me.Please give me a number from 0 to 1023.");

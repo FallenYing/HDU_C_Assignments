@@ -4,19 +4,19 @@
 
 对于这个问题，你要写一个 "退休储蓄 "计算器。我们将消除通货膨胀的影响，并使用一个 "Rate of return"表示。
 
- 1. 创建一个名为 "retirement.c "的文件。包括通常的头文件文件（stdlib.h 和 stdio.h）放在最上面。
+ 1. 创建一个名为 "retirement.c"的文件。包括通常的头文件文件（stdlib.h 和 stdio.h）放在最上面。
 
  2. 我们将对储蓄（工作时）和支出（退休时）进行建模。事实证明，这两个模型都需要的基本信息，所以我们将建立一个结构来表示这一点。声明一个`struct _retire_info`，它有三个字段。
 
      1. 一个名为 "months"的 int 变量，表示适用的月数。
      2. 一个名为 "contribution"的 double 变量，表示一个月有多少美元收入（如果是负数，则支出多少）。
-     3. 一个名为 "rate_of_return"的 double 变量，表示收益率。(我们将假设为 "扣除通货膨胀")。 
+     3. 一个名为 "rate_of_return"的 double 变量，表示收益率。(我们将假设为 "扣除通货膨胀")。
 
     在你声明了这个结构后，请使用 typedef 将 "retire_info"作为这个结构的另一个名称。
 
  3. 编写函数
 
-    ```
+    ```c
     void retirement (int startAge,   	//in months 以月为单位
                      double initial, 	//initial savings in dollars 初始存款
                      retire_info working, //info about working		 关于工作信息
@@ -35,7 +35,7 @@
 
  4. 写一个主函数，计算退休假设。
 
-    ```
+    ```txt
     Working:
     --------
     
@@ -47,7 +47,7 @@
     --------
     
       Months: 384
-      Per Month Spending: -4000
+      Per Month Spending: -$4000
       Rate of Return: 1% per year ( 0.01/12 per month) 
     
     Starting conditions:
@@ -58,4 +58,3 @@
     ```
 
  5. 编译你的代码`gcc -o retirement -pedantic -std=gnu99 -Wall -Werror retirement.c`并测试它（我们提供了输出文件：retirement_ans.txt）。
-
